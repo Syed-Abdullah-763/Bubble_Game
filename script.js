@@ -4,8 +4,9 @@ var hitrn = 0;
 
 function makeBubbles() {
     var clutter = "";
+    var bubbleCount = window.innerWidth < 768 ? 54 : 108; // Adjust number of bubbles based on screen width
 
-    for (var i = 1; i <= 108; i++) {
+    for (var i = 1; i <= bubbleCount; i++) {
         var rn = Math.floor(Math.random() * 10)
         clutter += `<div class="bubble">${rn}</div>`;
     }
